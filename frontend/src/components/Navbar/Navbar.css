@@ -1,0 +1,114 @@
+.navbar {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #f3f4f6, #e9ecef);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 120px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  color: #49557e;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.navbar-menu li {
+  cursor: pointer;
+  position: relative;
+  padding: 5px 0;
+}
+
+.navbar-menu li:hover {
+  color: tomato;
+}
+
+.navbar-menu li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: tomato;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.navbar-menu li:hover::after {
+  width: 100%;
+}
+
+.navbar .active {
+  border-bottom: none;
+  color: tomato;
+  font-weight: bold;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.navbar-serach-icon {
+  position: relative;
+  font-size: 20px;
+  color: #49557e;
+  cursor: pointer;
+}
+
+.dot {
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  background-color: tomato;
+  border-radius: 50%;
+  top: -5px;
+  right: -5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar button {
+  background: linear-gradient(90deg, tomato, #ff726f);
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar button:hover {
+  background: linear-gradient(90deg, #ff9a8b, tomato);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

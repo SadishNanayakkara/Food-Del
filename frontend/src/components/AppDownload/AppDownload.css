@@ -1,0 +1,79 @@
+.app-download-container {
+  text-align: center;
+  margin-top: 100px;
+  padding: 60px 5vw;
+  background: linear-gradient(135deg, #ee8964, #e7563c);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 75, 43, 0.3);
+  animation: fadeIn 1s ease-in-out;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-download p {
+  font-size: max(3vw, 24px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.app-download .highlight {
+  color: #ffdd57;
+  font-weight: 800;
+}
+
+.app-download-platforms {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.app-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.app-link img {
+  width: 180px;
+}
+
+.app-link:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Animation for smooth entrance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 600px) {
+  .app-download-container {
+    padding: 40px 5vw;
+  }
+
+  .app-download p {
+    font-size: 20px;
+  }
+
+  .app-link img {
+    width: 150px;
+  }
+}
