@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("Menu");
@@ -8,29 +9,41 @@ const Navbar = () => {
     <div className="navbar">
       <img src={assets.logo} alt="" className="logo" />
       <ul className="navbar-menu">
-        <li
-          onClick={() => setMenu("Home")}
-          className={menu === "Home" ? "active" : ""}
-        >
-          Home
+        <li>
+          <Link
+            to="/"
+            onClick={() => setMenu("Home")}
+            className={menu === "Home" ? "active" : ""}
+          >
+            Home
+          </Link>
         </li>
-        <li
-          onClick={() => setMenu("Menu")}
-          className={menu === "Menu" ? "active" : ""}
-        >
-          Menu
+        <li>
+          <a
+            href="#explore-menu"
+            onClick={() => setMenu("Menu")}
+            className={menu === "Menu" ? "active" : ""}
+          >
+            Menu
+          </a>
         </li>
-        <li
-          onClick={() => setMenu("Mobile App")}
-          className={menu === "Mobile App" ? "active" : ""}
-        >
-          Mobile App
+        <li>
+          <a
+            href="#app-download"
+            onClick={() => setMenu("Mobile App")}
+            className={menu === "Mobile App" ? "active" : ""}
+          >
+            Mobile App
+          </a>
         </li>
-        <li
-          onClick={() => setMenu("Contact Us")}
-          className={menu === "Contact Us" ? "active" : ""}
-        >
-          Contact Us
+        <li>
+          <a
+            href="#footer"
+            onClick={() => setMenu("Contact Us")}
+            className={menu === "Contact Us" ? "active" : ""}
+          >
+            Contact Us
+          </a>
         </li>
       </ul>
       <div className="navbar-right">
